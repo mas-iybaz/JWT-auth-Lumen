@@ -55,7 +55,7 @@ class AuthController extends Controller
         ]);
 
         try {
-            $credentials = $request->only('email', 'password');
+            $credentials = $request->only(['email', 'password']);
 
             $token = Auth::attempt($credentials);
 
